@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+div.centred {
+	padding:2em 0em 2em 0em;
+	position: relative;
+	width: 100%;
+	font-size: 2em;
+	text-align: center;
+}
+
+section {
+	position: relative;
+	display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 1em;
+	width: 100%;
+}
+
+.wrapper .block1, .wrapper .block2, .wrapper .block3 {
+	display: inline-block;
+	min-height:450px;
+	width: 31%;
+	transition: .2s linear;
+}
+
+.wrapper p.l-height {
+	line-height: 1.5em;
+}
+
+.wrapper .in-block {
+	padding: 0px;
+	margin:0px;	
+	border:10px solid transparent;
+	border-image: url('images/border-diamonds.png') 50 / 10px round;
+	background: lightgray
+}
+
+.block1, .block2, .block3 {
+	position: relative;
+	text-align: left;
+	display: block;
+}
+
+
+.block1 p.l-height, .block2 p.l-height, .block3 p.l-height {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: 50%;
+	transform: translate(-50%, -50%);
+	margin-top:2em;
+	width: 100%;
+}
+
+.block-header {
+	position: absolute;
+	top:0px;
+	right:0px;
+	width: 9em;
+}
+
+.block-header p {
+	text-align: center;
+	padding: .7em;
+	
+}
+
+.block1 p:nth-child(1) {
+	color:maroon;
+	font-weight: bold;
+	background-color: coral;
+}
+
+.block2 p:nth-child(1) {
+	color:white;
+	font-weight: bold;
+	background-color: maroon;
+}
+
+.block3 p:nth-child(1) {
+	color:maroon;
+	font-weight: bold;
+	background-color: wheat;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+	.wrapper {
+		justify-content: space-between;
+	}
+
+	.wrapper .block1, .wrapper .block2 {
+		width: 49%;text-align: center;
+	}
+	.wrapper .block3 {
+		text-align: center;
+		width: 100%;
+		margin:0px!important;
+		margin-top: 1em!important;
+	}
+
+	.block1 p.l-height, .block2 p.l-height, .block3 p.l-height {
+		margin-top:0em;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.wrapper .block1, .wrapper .block2, .wrapper .block3{
+		margin-top: 1em;
+		width: 100%;
+		text-align: justify;
+	}
+
+	.wrapper .block1 {
+		margin-top: 0;
+	}
+
+	.block1 p.l-height, .block2 p.l-height, .block3 p.l-height {
+		margin-top:1em;
+	}
+}
+
